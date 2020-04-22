@@ -8,27 +8,32 @@ namespace xadrez_console
     {
         static void Main(string[] args)
         {
-            //try
-            //{
-            //    Tabuleiro tab = new Tabuleiro(8, 8);
+            try
+            {
+                Tabuleiro tab = new Tabuleiro(8, 8);
 
-            //    tab.ColocarPeca(new Torre(tab, Cor.Preta), new Posicao(0, 0));
-            //    tab.ColocarPeca(new Torre(tab, Cor.Preta), new Posicao(1, 3));
-            //    tab.ColocarPeca(new Rei(tab, Cor.Preta), new Posicao(1, 7));
-            //    tab.ColocarPeca(new Rei(tab, Cor.Preta), new Posicao(2, 4));
+                tab.ColocarPeca(new Torre(tab, Cor.Preta), new Posicao(0, 0));
+                tab.ColocarPeca(new Torre(tab, Cor.Branca), new Posicao(1, 3));
+                tab.ColocarPeca(new Rei(tab, Cor.Preta), new Posicao(1, 7));
+                tab.ColocarPeca(new Rei(tab, Cor.Branca), new Posicao(2, 4));
+                
+                
+                tab.ColocarPeca(new Torre(tab, Cor.Preta), new Posicao(3, 4));
+                tab.ColocarPeca(new Rei(tab, Cor.Preta), new Posicao(1, 4));
+                tab.ColocarPeca(new Torre(tab, Cor.Branca), new Posicao(0, 4));
 
-            //    Tela.ImprimeTabuleiro(tab);
 
-            //}
-            //catch (TabuleiroException e)
-            //{
-            //    Console.WriteLine(e.Message);
-            //}
 
-            PosicaoXadrez pos = new PosicaoXadrez('c', 7);
+                Tela.ImprimeTabuleiro(tab);
 
-            Console.WriteLine(pos.ToString());
-            Console.WriteLine(pos.ToPosicao());
+            }
+            catch (TabuleiroException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            Console.ReadLine();
+            
         }
     }
 }
