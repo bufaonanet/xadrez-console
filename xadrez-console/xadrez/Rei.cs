@@ -13,7 +13,6 @@ namespace xadrez
             Peca p = Tab.Peca(pos);
             return (p == null || p.Cor != Cor);
         }
-
         public override bool[,] MovimentosPossiveis()
         {
             bool[,] mat = new bool[Tab.Linhas, Tab.Colunas];
@@ -78,7 +77,6 @@ namespace xadrez
 
             return  mat;
         }
-
         public override string ToString()
         {
             return "R";
