@@ -74,7 +74,6 @@ namespace xadrez
                 pos.Linha++;
                 pos.Coluna--;
             }
-
             return mat;
         }
     }
