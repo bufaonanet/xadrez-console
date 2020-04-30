@@ -32,7 +32,8 @@ namespace xadrez
                 {
                     break;
                 }
-                pos.DefinirValores(Posicao.Linha - 1, Posicao.Coluna - 1);
+                pos.Linha--;
+                pos.Coluna--;
             }
 
             //ne
@@ -44,7 +45,8 @@ namespace xadrez
                 {
                     break;
                 }
-                pos.DefinirValores(Posicao.Linha - 1, Posicao.Coluna + 1);
+                pos.Linha--;
+                pos.Coluna++;
             }
 
             //se
@@ -56,7 +58,8 @@ namespace xadrez
                 {
                     break;
                 }
-                pos.DefinirValores(Posicao.Linha + 1, Posicao.Coluna + 1);
+                pos.Linha++;
+                pos.Coluna++;
             }
 
             //so
@@ -68,7 +71,8 @@ namespace xadrez
                 {
                     break;
                 }
-                pos.DefinirValores(Posicao.Linha + 1, Posicao.Coluna - 1);
+                pos.Linha++;
+                pos.Coluna--;
             }
 
             return mat;
